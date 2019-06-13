@@ -1,4 +1,4 @@
-var GameMain = /** @class */ (function () {
+var GameMain = (function () {
     function GameMain() {
         Laya.init(800, 600);
         Laya.stage.bgColor = "#ffcccc";

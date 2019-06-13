@@ -1,7 +1,7 @@
 /**
  * Mole
  */
-var Mole = /** @class */ (function () {
+var Mole = (function () {
     function Mole(normalState, hitState, downY) {
         this.normalState = normalState;
         this.hitState = hitState;
