@@ -1,19 +1,18 @@
-/*
-* 游戏初始化配置;
-*/
-var GameConfig = (function () {
-    function GameConfig() {
-    }
-    return GameConfig;
-}());
-GameConfig.width = 1136;
-GameConfig.height = 640;
-GameConfig.scaleMode = "showall";
-GameConfig.screenMode = "none";
-GameConfig.alignV = "top";
-GameConfig.alignH = "left";
-GameConfig.startScene = ui.GameUI;
-GameConfig.sceneRoot = "";
-GameConfig.debug = false;
-GameConfig.stat = false;
+// /*
+// * 游戏初始化配置;
+// */
+// class GameConfig{
+//     static width:number=1136;
+//     static height:number=640;
+//     static scaleMode:string="showall";
+//     static screenMode:string="none";
+//     static alignV:string="top";
+//     static alignH:string="left";
+//     static startScene:any=ui.GameUI;
+//     static sceneRoot:string="";
+//     static debug:boolean=false;
+//     static stat:boolean=false;
+//     constructor(){
+//     }
+// }
 //# sourceMappingURL=GameConfig.js.map

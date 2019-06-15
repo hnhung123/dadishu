@@ -7,7 +7,7 @@ class GameMain{
             {url:"res/atlas/ui.json",type:Laya.Loader.ATLAS},
             {url:"ui/back.png",type:Laya.Loader.IMAGE}
         ];
-        Laya.loader.load(resArray,Laya.Handler.create(this,this.onLoaded));
+        Laya.loader.load(resArray,Laya.Handler.create(this,this.onLoaded),null);
     }
     onLoaded():void{
         var view:GameView=new GameView();

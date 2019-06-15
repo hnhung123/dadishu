@@ -6,17 +6,23 @@ class Mole{
     private hitState:Laya.Image;
     private downY:number;
     private upY:number;
+    private scoreImg: Laya.Image;
+    private scoreY:number;
+    private hitCallBackHd:Laya.Handler; 
 
     private isActive:boolean;
     private isShow:boolean;
     private isHit:boolean;
+    private type:number;
 
-    constructor(normalState:Laya.Image,hitState:Laya.Image,downY:number){
+    constructor(normalState:Laya.Image,hitState:Laya.Image,downY:number,hitCallBackHd:Laya.Handler){
         this.normalState=normalState;
         this.hitState=hitState;
         this.downY=downY;
         this.upY=this.normalState.y;
+        this.hitCallBackHd=hitCallBackHd;
         this.reset();
+        this.normalState.on(Laya.Event.MOUSE_DOWN,this,this.hit);
     }
     reset():void{
         this.normalState.visible=false;
@@ -27,8 +33,11 @@ class Mole{
     }
     show():void{
         if(this.isActive) return;
-        this.isActive == true;
+        this.isActive= true;
         this.isShow=true;
+        this.type=Math.random()<0.3?1:2;
+        this.normalState.skin="ui/mouse_normal_"+this.type+".png";
+        this.hitState.skin="ui/mouse_hit_"+this.type+".png";
         this.normalState.y=this.downY;
         this.normalState.visible=true;
         Laya.Tween.to(this.normalState,{y:this.upY},500,Laya.Ease.backOut,Laya.Handler.create(this,this.showComplete))
@@ -39,10 +48,21 @@ class Mole{
         }
     }
     hide():void{
-        
+        if(this.isShow&&!this.isHit){
+            this.isShow=false;
+            Laya.Tween.to(this.normalState,{y:this.downY},300,Laya.Ease.backIn,Laya.Handler.create(this,this.hit))
+        }
     }
     hit():void{
-
+        if(this.isShow && !this.isHit){
+            this.isHit = true;
+            this.isShow=false;
+            Laya.timer.clear(this,this.hide);
+            this.normalState.visible=false;
+            this.hitState.visible=true;
+            this.hitCallBackHd.runWith(this.type);
+            Laya.timer.once(500,this,this.reset);
+        }
     }
 
 }

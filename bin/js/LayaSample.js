@@ -1,4 +1,4 @@
-var GameMain = (function () {
+var GameMain = /** @class */ (function () {
     function GameMain() {
         Laya.init(800, 600);
         Laya.stage.bgColor = "#ffcccc";
@@ -6,7 +6,7 @@ var GameMain = (function () {
             { url: "res/atlas/ui.json", type: Laya.Loader.ATLAS },
             { url: "ui/back.png", type: Laya.Loader.IMAGE }
         ];
-        Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoaded));
+        Laya.loader.load(resArray, Laya.Handler.create(this, this.onLoaded), null);
     }
     GameMain.prototype.onLoaded = function () {
         var view = new GameView();
