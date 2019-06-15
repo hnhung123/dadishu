@@ -38,6 +38,6 @@ class GameView extends ui.GameUI{
         this.upDateScoreUI();
     }
     upDateScoreUI():void{
-
+        
     }
 }
