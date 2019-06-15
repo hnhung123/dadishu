@@ -29,4 +29,19 @@ var ui;
     }(View));
     ui.GameUI = GameUI;
 })(ui || (ui = {}));
+(function (ui) {
+    var HammerUI = /** @class */ (function (_super) {
+        __extends(HammerUI, _super);
+        function HammerUI() {
+            return _super.call(this) || this;
+        }
+        HammerUI.prototype.createChildren = function () {
+            _super.prototype.createChildren.call(this);
+            this.createView(ui.HammerUI.uiView);
+        };
+        HammerUI.uiView = { "type": "View", "props": { "width": 100, "height": 100 }, "child": [{ "type": "Image", "props": { "y": 60, "x": 71, "width": 98, "skin": "ui/hammer.png", "rotation": 20, "pivotY": 49, "pivotX": 56, "height": 77 }, "compId": 2 }], "animations": [{ "nodes": [{ "target": 2, "keyframes": { "y": [{ "value": 65, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "y", "index": 0 }, { "value": 62, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "y", "index": 1 }, { "value": 60, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "y", "index": 5 }], "x": [{ "value": 67, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "x", "index": 0 }, { "value": 60, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "x", "index": 5 }], "var": [{ "value": null, "tweenMethod": "linearNone", "tween": false, "target": 2, "key": "var", "index": 0 }, { "value": "", "tweenMethod": "linearNone", "tween": false, "target": 2, "key": "var", "index": 5 }], "rotation": [{ "value": 20, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "rotation", "index": 0 }, { "value": -20, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "rotation", "index": 1 }, { "value": 20, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "rotation", "index": 5 }] } }], "name": "hit", "id": 1, "frameRate": 24, "action": 0 }] };
+        return HammerUI;
+    }(View));
+    ui.HammerUI = HammerUI;
+})(ui || (ui = {}));
 //# sourceMappingURL=layaUI.max.all.js.map

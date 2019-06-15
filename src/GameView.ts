@@ -5,6 +5,7 @@ class GameView extends ui.GameUI{
     private moles:Array<Mole>;
     private moleNum:number=9;
     private score:number;
+    private hammer:Hammer;
     constructor(){
         super();
         this.moles=new Array<Mole>();
@@ -18,7 +19,9 @@ class GameView extends ui.GameUI{
                 box.getChildByName("scoreImg") as Laya.Image,21,hitCallBackHd);
             this.moles.push(mole);
         }
-        //this.scoreNums.dataSource={item0:{index:5},item1:{index:9}};
+        this.hammer=new Hammer();
+        this.addChild(this.hammer);
+        this.hammer.start();
         Laya.timer.loop(1000,this,this.onLoop);
     }
     onLoop():void{
@@ -32,6 +35,8 @@ class GameView extends ui.GameUI{
     }
     gameOver():void{
         Laya.timer.clear(this,this.onLoop);
+        this.hammer.visible=false; 
+        this.hammer.end();
         console.log("游戏结束！");
     }
     setScore(type:number):void{

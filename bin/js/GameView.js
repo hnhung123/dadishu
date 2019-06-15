@@ -28,7 +28,9 @@ var GameView = /** @class */ (function (_super) {
             var mole = new Mole(box.getChildByName("normal"), box.getChildByName("hit"), box.getChildByName("scoreImg"), 21, hitCallBackHd);
             _this.moles.push(mole);
         }
-        //this.scoreNums.dataSource={item0:{index:5},item1:{index:9}};
+        _this.hammer = new Hammer();
+        _this.addChild(_this.hammer);
+        _this.hammer.start();
         Laya.timer.loop(1000, _this, _this.onLoop);
         return _this;
     }
@@ -43,6 +45,8 @@ var GameView = /** @class */ (function (_super) {
     };
     GameView.prototype.gameOver = function () {
         Laya.timer.clear(this, this.onLoop);
+        this.hammer.visible = false;
+        this.hammer.end();
         console.log("游戏结束！");
     };
     GameView.prototype.setScore = function (type) {
