@@ -25,10 +25,10 @@ var GameView = /** @class */ (function (_super) {
         var hitCallBackHd = Laya.Handler.create(_this, _this.setScore, null, false);
         for (var i = 0; i < _this.moleNum; i++) {
             var box = _this.getChildByName("item" + i);
-            var mole = new Mole(box.getChildByName("normal"), box.getChildByName("hit"), 21, hitCallBackHd);
+            var mole = new Mole(box.getChildByName("normal"), box.getChildByName("hit"), box.getChildByName("scoreImg"), 21, hitCallBackHd);
             _this.moles.push(mole);
         }
-        _this.scoreNums.dataSource = { item0: { index: 5 }, item1: { index: 9 } };
+        //this.scoreNums.dataSource={item0:{index:5},item1:{index:9}};
         Laya.timer.loop(1000, _this, _this.onLoop);
         return _this;
     }
@@ -52,6 +52,13 @@ var GameView = /** @class */ (function (_super) {
         this.upDateScoreUI();
     };
     GameView.prototype.upDateScoreUI = function () {
+        var data = {};
+        var temp = this.score;
+        for (var i = 9; i >= 0; i--) {
+            data["item" + i] = { index: Math.floor(temp % 10) };
+            temp /= 10;
+        }
+        this.scoreNums.dataSource = data;
     };
     return GameView;
 }(ui.GameUI));

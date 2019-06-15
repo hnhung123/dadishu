@@ -13,10 +13,12 @@ class GameView extends ui.GameUI{
         var hitCallBackHd:Laya.Handler=Laya.Handler.create(this,this.setScore,null,false);
         for(var i:number=0;i<this.moleNum;i++){
             var box:Laya.Box=this.getChildByName("item"+i) as Laya.Box;
-            var mole:Mole=new Mole(box.getChildByName("normal") as Laya.Image,box.getChildByName("hit") as Laya.Image,21,hitCallBackHd);
+            var mole:Mole=new Mole(box.getChildByName("normal") as Laya.Image,
+                box.getChildByName("hit") as Laya.Image,
+                box.getChildByName("scoreImg") as Laya.Image,21,hitCallBackHd);
             this.moles.push(mole);
         }
-        this.scoreNums.dataSource={item0:{index:5},item1:{index:9}};
+        //this.scoreNums.dataSource={item0:{index:5},item1:{index:9}};
         Laya.timer.loop(1000,this,this.onLoop);
     }
     onLoop():void{
@@ -38,6 +40,12 @@ class GameView extends ui.GameUI{
         this.upDateScoreUI();
     }
     upDateScoreUI():void{
-        
+        var data:any={};
+        var temp:number=this.score;
+        for(var i:number=9;i>=0;i--){
+            data["item"+i]={index:Math.floor(temp%10)};
+            temp/=10;
+        }
+        this.scoreNums.dataSource=data;
     }
 }

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":65,
-    "selecteID":67,
+    "selectedBox":11,
+    "selecteID":79,
     "searchKey":"View",
     "props":{"width":800,"sceneColor":"#ffffff","height":600},
     "nodeParent":-1,
@@ -84,6 +84,20 @@
                     "compId":10,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":30,"x":60,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":11,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":68,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -139,6 +153,20 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":15,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":40,"x":70,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":12,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":69,
                     "child":[
                         ]
                 }]
@@ -199,6 +227,20 @@
                     "compId":19,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":33,"x":65,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":16,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":71,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -254,6 +296,20 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":23,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":29,"x":63,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":20,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":72,
                     "child":[
                         ]
                 }]
@@ -313,6 +369,20 @@
                     "compId":27,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":30,"x":65,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":24,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":73,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -368,6 +438,20 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":31,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":36,"x":58,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":28,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":75,
                     "child":[
                         ]
                 }]
@@ -427,6 +511,20 @@
                     "compId":35,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":32,"x":57,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":32,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":74,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -482,6 +580,20 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":39,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":37,"x":62,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":36,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":77,
                     "child":[
                         ]
                 }]
@@ -543,6 +655,20 @@
                     "child":[
                         ],
                     "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":36,"x":61,"skin":"ui/score_2.png","name":"scoreImg","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":40,
+                    "label":"Image(scoreImg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":76,
+                    "child":[
+                        ]
                 }]
         },
         {
